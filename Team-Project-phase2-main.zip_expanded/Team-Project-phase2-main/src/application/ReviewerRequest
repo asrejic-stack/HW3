@@ -1,0 +1,25 @@
+package application;
+
+public class ReviewerRequest {
+
+    private int requestId;
+    private String username;
+    private String status; // PENDING, APPROVED, DENIED
+
+    public ReviewerRequest(int requestId, String username, String status) {
+        this.requestId = requestId;
+        this.username = username;
+        this.status = status;
+    }
+
+    public int getRequestId() { return requestId; }
+    public String getUsername() { return username; }
+    public String getStatus() { return status; }
+
+    public void setStatus(String status) { this.status = status; }
+
+    @Override
+    public String toString() {
+        return "Request #" + requestId + " by " + username + " (" + status + ")";
+    }
+}
